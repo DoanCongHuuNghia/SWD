@@ -39,6 +39,9 @@
         background-color: var(--bs-primary);
         color: #fff;
       }
+      .contractor {
+        display: none;
+      }
     </style>
   </head>
 
@@ -122,12 +125,18 @@
                 >
               </a>
               <div class="nav-item dropdown">
-                <a href="#" class="my-auto d-flex align-items-center"  data-bs-toggle="dropdown">
+                <a
+                  href=""
+                  class="my-auto d-flex align-items-center"
+                  data-bs-toggle="dropdown"
+                >
                   <i class="fas fa-user fa-2x"></i>
                 </a>
                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                    <a href="profile.html" class="dropdown-item">Profile</a>
-                    <a href="order-history.html" class="dropdown-item">Order History</a>
+                  <a href="profile.html" class="dropdown-item">Profile</a>
+                  <a href="order-history.html" class="dropdown-item"
+                    >Order History</a
+                  >
                 </div>
               </div>
             </div>
@@ -136,179 +145,283 @@
       </div>
     </div>
 
-    <div class="container-fluid bg-light py-3" style="margin-top: 150px;">
+    <div class="container-fluid bg-light py-3" style="margin-top: 150px">
       <ol class="container breadcrumb mb-0 text-start px-2">
         <li class="breadcrumb-item text-dark"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item text-dark">Cart</li>
+        <li class="breadcrumb-item text-dark"><a href="order-history.html">History Order</a></li>
+        <li class="breadcrumb-item text-dark">Order Detail</li>
       </ol>
     </div>
 
     <div class="container-fluid my-5">
-      <div class="container border border-secondary bg-light" style="min-height: 500px;">
-        <h1 class="text-center mt-3">Cart</h1>
+      <div
+        class="container border border-secondary bg-light"
+        style="min-height: 500px"
+      >
         <div class="row m-3">
-          <div class="col-md-12 col-lg-8 bg-white p-3">
+          <div
+            class="col-md-12 col-lg-5"
+            style="padding-left: 0; padding-right: 30px"
+          >
+            <div class="border border-dark p-3 bg-white">
+              <h2 class="">Delivery information</h2>
+              <div class="row mb-2">
+                <div class="col-lg-12">
+                  <label for="FullName" class="h6">FullName</label><br />
+                  <input
+                    name="FullName"
+                    type="text"
+                    class="w-100 p-2"
+                    style="border: 1px solid #ccc"
+                    placeholder="Enter Your FullName"
+                    value="Nguyen Van A"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-lg-6">
+                  <label for="phone" class="h6">Phone Number</label><br />
+                  <input
+                    name="phone"
+                    type="text"
+                    class="w-100 p-2"
+                    style="border: 1px solid #ccc"
+                    placeholder="Enter Your Phone Number"
+                    value="0123456789"
+                    readonly
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <label for="email" class="h6">Email</label><br />
+                  <input
+                    name="email"
+                    type="text"
+                    class="w-100 p-2"
+                    style="border: 1px solid #ccc"
+                    placeholder="Enter Your Email"
+                    value="nva123@gmail.com"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-lg-12">
+                  <label for="address" class="h6">Address</label><br />
+                  <input
+                    name="address"
+                    type="text"
+                    class="w-100 p-2"
+                    style="border: 1px solid #ccc"
+                    placeholder="Enter Your Address"
+                    value="59 Le Thien Tri, Hoa Hai"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-lg-6">
+                  <label for="province" class="h6">City/Province</label><br />
+                  <select
+                    id="province"
+                    class="p-2 w-100"
+                    style="border: 1px solid #ccc"
+                    disabled
+                  >
+                    <option value="" disabled>Select City/Province</option>
+                    <option value="tinh1">Ho Chi Minh</option>
+                    <option value="tinh2" selected>Da Nang</option>
+                    <option value="tinh3">Ha Noi</option>
+                  </select>
+                </div>
+                <div class="col-lg-6">
+                  <label for="email" class="h6">District</label><br />
+                  <select
+                    id="province"
+                    class="p-2 w-100"
+                    style="border: 1px solid #ccc"
+                    disabled
+                  >
+                    <option value="" disabled>Select District</option>
+                    <option value="huyen1" selected>Ngu Hanh Son</option>
+                    <option value="huyen2">Son Tra</option>
+                    <option value="huyen2">Lien Chieu</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-lg-12">
+                  <label for="request" class="h6">Request more</label><br />
+                  <textarea
+                    name="request"
+                    class="w-100"
+                    cols="10"
+                    rows="5"
+                    style="border: 1px solid #ccc"
+                    readonly
+                  >
+Request abcxyz</textarea
+                  >
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-lg-12">
+                  <label for="contractors" class="h6">Contractors</label><br />
+                  <select
+                    id="contractors"
+                    class="p-2 w-100"
+                    style="border: 1px solid #ccc"
+                    disabled
+                  >
+                    <option value="" disabled>Select Contractors</option>
+                    <option value="contractor1">Contractor 1</option>
+                    <option value="contractor2" selected>Contractor 2</option>
+                    <option value="contractor3">Contractor 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p id="contractor1" class="contractor">
+                    Construction price: 500,000VND
+                  </p>
+                  <p id="contractor2" class="">
+                    Construction price: 480,000VND
+                  </p>
+                  <p id="contractor3" class="contractor">
+                    Construction price: 550,000VND
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-7 bg-white p-3">
+                <h2>Order Detail</h2>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <p><span class="h6">Order Status:</span> Completed</p>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <p><span class="h6">Order Date:</span> 12/04/2024</p>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <p><span class="h6">Payment Method:</span> Bank Transfer</p>
+                    </div>
+                </div>
+                
+                
+                
             <table class="table table-bordered m-0">
               <thead>
                 <tr>
                   <th scope="col">Image</th>
                   <th scope="col">Product</th>
                   <th scope="col">Total</th>
-                  <th scope="col">Handle</th>
                 </tr>
               </thead>
               <tbody>
-                  <tr>
-                      <th scope="row">
-                          <div class="d-flex align-items-center">
-                              <img src="img/cart1.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-                          </div>
-                      </th>
-                      <td>
-                          <p class="mb-0 mt-2">Jotun Jotashield exterior anti-fade paint, new 15L box</p>
-                          <p class="mb-0 mt-2">Capacity: 17L</p>
-                          <p class="mb-0 mt-2">Price: 200,000VND</p>
-                          <div class="d-flex align-items-center">
-                            <div class="" style="padding-right: 10px;">Quantity:</div>
-                            <div class="input-group quantity mt-2" style="width: 100px;">
-                              <div class="input-group-btn">
-                                  <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                  <i class="fa fa-minus"></i>
-                                  </button>
-                              </div>
-                              <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                              <div class="input-group-btn">
-                                  <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                      <i class="fa fa-plus"></i>
-                                  </button>
-                              </div>
-                          </div>
-                          </div>
-                          
-                      </td>
-                      <td>
-                          <p class="mb-0 mt-4">200,000VND</p>
-                      </td>
-                      <td>
-                          <button class="btn btn-md rounded-circle bg-light border mt-4" >
-                              <i class="fa fa-times text-danger"></i>
-                          </button>
-                      </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                        <div class="d-flex align-items-center">
-                            <img src="img/cart2.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-                        </div>
-                    </th>
-                    <td>
-                        <p class="mb-0 mt-2">Enric Cool - High quality exterior paint Anti-heat, Anti-color fading, Anti-dust, Durable color 5L</p>
-                        <p class="mb-0 mt-2">Capacity: 20L</p>
-                        <p class="mb-0 mt-2">Price: 1,989,000VND</p>
-                        <div class="d-flex align-items-center">
-                          <div class="" style="padding-right: 10px;">Quantity:</div>
-                          <div class="input-group quantity mt-2" style="width: 100px;">
-                            <div class="input-group-btn">
-                                <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                <i class="fa fa-minus"></i>
-                                </button>
-                            </div>
-                            <input type="text" class="form-control form-control-sm text-center border-0" value="2">
-                            <div class="input-group-btn">
-                                <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                    <i class="fa fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        </div>
-                        
-                    </td>
-                    <td>
-                        <p class="mb-0 mt-4">3,978,000VND</p>
-                    </td>
-                    <td>
-                        <button class="btn btn-md rounded-circle bg-light border mt-4" >
-                            <i class="fa fa-times text-danger"></i>
-                        </button>
-                    </td>
+                <tr>
+                  <th scope="row">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="img/cart1.jpg"
+                        class="img-fluid me-5 rounded-circle"
+                        style="width: 80px; height: 80px"
+                        alt=""
+                      />
+                    </div>
+                  </th>
+                  <td>
+                    <p class="mb-0 mt-2">
+                      Jotun Jotashield exterior anti-fade paint, new 15L box
+                    </p>
+                    <p class="mb-0 mt-2">Capacity: 17L</p>
+                    <p class="mb-0 mt-2">Price: 200,000VND</p>
+                    <div class="d-flex align-items-center">
+                      <div class="" style="padding-right: 10px">
+                        Quantity: 1
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="mb-0 mt-4">200,000VND</p>
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row">
-                      <div class="d-flex align-items-center">
-                          <img src="img/cart3.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-                      </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="img/cart2.jpg"
+                        class="img-fluid me-5 rounded-circle"
+                        style="width: 80px; height: 80px"
+                        alt=""
+                      />
+                    </div>
                   </th>
                   <td>
-                      <p class="mb-0 mt-2">Interior paint - Premium - Dulux EasyClean Effective Cleaning - Matte surface - 5L</p>
-                      <p class="mb-0 mt-2">Capacity: 5L</p>
-                      <p class="mb-0 mt-2">Price: 680,000VND</p>
-                      <div class="d-flex align-items-center">
-                        <div class="" style="padding-right: 10px;">Quantity:</div>
-                        <div class="input-group quantity mt-2" style="width: 100px;">
-                          <div class="input-group-btn">
-                              <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                              <i class="fa fa-minus"></i>
-                              </button>
-                          </div>
-                          <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                          <div class="input-group-btn">
-                              <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                  <i class="fa fa-plus"></i>
-                              </button>
-                          </div>
+                    <p class="mb-0 mt-2">
+                      Enric Cool - High quality exterior paint Anti-heat,
+                      Anti-color fading, Anti-dust, Durable color 5L
+                    </p>
+                    <p class="mb-0 mt-2">Capacity: 20L</p>
+                    <p class="mb-0 mt-2">Price: 1,989,000VND</p>
+                    <div class="d-flex align-items-center">
+                      <div class="" style="padding-right: 10px">
+                        Quantity: 2
                       </div>
-                      </div>
-                      
+                    </div>
                   </td>
                   <td>
-                      <p class="mb-0 mt-4">680,000VND</p>
+                    <p class="mb-0 mt-4">3,978,000VND</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="img/cart3.jpg"
+                        class="img-fluid me-5 rounded-circle"
+                        style="width: 80px; height: 80px"
+                        alt=""
+                      />
+                    </div>
+                  </th>
+                  <td>
+                    <p class="mb-0 mt-2">
+                      Interior paint - Premium - Dulux EasyClean Effective
+                      Cleaning - Matte surface - 5L
+                    </p>
+                    <p class="mb-0 mt-2">Capacity: 5L</p>
+                    <p class="mb-0 mt-2">Price: 680,000VND</p>
+                    <div class="d-flex align-items-center">
+                      <div class="" style="padding-right: 10px">
+                        Quantity: 1
+                      </div>
+                    </div>
                   </td>
                   <td>
-                      <button class="btn btn-md rounded-circle bg-light border mt-4" >
-                          <i class="fa fa-times text-danger"></i>
-                      </button>
+                    <p class="mb-0 mt-4">680,000VND</p>
                   </td>
-              </tr>
+                </tr>
               </tbody>
-          </table>
+            </table>
+            <table class="table table-bordered border border-dark my-4">
+              <tbody>
+                <tr>
+                  <td>Subtotal</td>
+                  <td>4,858,000VND</td>
+                </tr>
+                <tr>
+                  <td>Shipping</td>
+                  <td>48,580VND</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>4,903,580VND</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="col-md-12 col-lg-4" style="padding-left: 30px; padding-right: 0;">
-            <div class="border border-dark p-3" style="border-width: 2px !important;">
-              <table class="table table-bordered border border-dark">
-                <tbody>
-                  <tr>
-                    <td>Subtotal</td>
-                    <td>4,858,000VND</td>
-                  </tr>
-                  <tr>
-                    <td>Shipping</td>
-                    <td>48,580VND</td>
-                  </tr>
-                  <tr>
-                    <td>Total</td>
-                    <td>4,903,580VND</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a href="checkout.html" class="btn border border-primary py-2 px-4 rounded-pill w-100 btn-place-order">Place Order</a>
-            </div>
-            
-          </div>
-        </div>
-        <div class="row m-2">
-          <div class="col-md-12 col-lg-4">
-            <p class="m-0">Use discount vouchers</p>
-            <label for="voucher" class="h6 py-1">Enter you discount vouchers here!</label> <br>
-            <input name="voucher" type="text" class="w-100 p-2" style="border: 1px solid #ccc;" placeholder="Enter you discount vouchers here!">
-            <button class="btn border border-primary py-1 px-2 my-2 rounded-pill w-100 btn-place-order">Apply discount vouchers</button>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <p class="m-0">Use gift vouchers</p>
-            <label for="gift-voucher" class="h6 py-1">Enter you gift vouchers here!</label> <br>
-            <input name="gift-voucher" type="text" class="w-100 p-2" style="border: 1px solid #ccc;" placeholder="Enter you gift vouchers here!">
-            <button class="btn border border-primary py-1 px-2 my-2 rounded-pill w-100 btn-place-order">Apply gift vouchers</button>
-          </div>
-          <div class="col-md-12 col-lg-4"></div>
         </div>
       </div>
     </div>
